@@ -1,0 +1,12 @@
+Project lets create a text rpg using html/css/javascript
+
+        Choices can be activated using and saved using alert, confirm, and prompt
+    with console.log acting as save state
+
+        Dot notation can be used as feature to get users to interact with the story and jump around the page
+
+        Light artwork, childish in nature
+
+        If, else choices, with failure ending in "Rocks fall, everyone dies." No matter what the situation
+    
+

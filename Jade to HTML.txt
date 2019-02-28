@@ -1,0 +1,28 @@
+npm install ejs --save
+	if successful will show in dependencies in app.js
+
+change to this: 
+app.engine('html', require('ejs').renderFile);
+// view engine setup
+//old stuff
+app.set('views', path.join(__dirname, ''));
+app.set('view engine', 'html');
+
+create index.html and error.html in base folder
+
+convert layout.jade error.jade, and index.jade to html using: 
+ext html2pug
+ext html2jade
+
+copy converted layout.jade into both files
+
+copy converted index.jade into index.html below script
+
+you should be able to see changes so far at this point
+	link bootstrap to css and place it under the rest of the css
+
+add button to google under header! 
+	class should be success
+
+<a href="https://google.com" class="btn btn-success"> text </a>
+	

@@ -1,0 +1,88 @@
+What is Git?
+
+Source Control
+    Source or Version Control is a way to track changes over time
+    It distributes changes over time
+
+    Benefits
+    You can avoid data loss or damage using VC
+    It can manage complex project structure
+
+Git is a source control software
+    Made to help manage Linux OS project
+
+    Advantages
+    It is the most popular SC software
+    It is integrated with other apps like SourceTree
+
+Differences Between Git and GitHub
+
+    GitHub allows you to store your Git respositories, where you store your timeline SC
+    It gives you server space to store your repositories remotely
+        You can interact with this on your local machine using push/pull
+        It allows you to add collaborators for team projects
+
+The Actual Differences
+    Git is SC software, gives you the backbone of SC
+    GitHub allows you to add more functionality to Git
+        It builds off Git and gives platform to use Git
+            GitHub is more user friendly
+
+BOTH GIT AND GITHUB CONTAIN A SPECIAL TERMINAL ON THE WEB TO INTERACT WITH REPOSITORY
+
+So there are many terminals out there:
+    Git.bash
+    PowerShell
+    Win Prompt (windows + r, cmd.exe)
+        You can also go to Program Features and opt in to use Linux style terminal
+
+    Commands To Know
+        ls
+        mkdir folders
+        ls folders
+        cd folders
+        /folders
+
+        may need $ for cmd
+
+THE BEST TERMINAL IS BASH BECAUSE ITS WIDELY USED
+
+About Terminal
+
+A terminal is a way to interact with your OS directly
+    you can interact with OS just by opening folder and trolling through it 
+    this interaction is built off the terminal 
+
+        the goal of an OS like Windows 10 is to make a user friendly exp, hiding the terminal's complexity
+
+        there's a lot of things you can do in the terminal that you can't do in DUI (direct user interface?)
+
+        a shell and a terminal are almost the exact same thing
+
+Windows CMD vs Ubuntu
+
+In CMD, you are in the c/drive
+In Ubuntu, it's more of a sub system
+    when you started Ubuntu the first time, it created a subsystem for Linux
+
+    CASE AND SPACE SENSITIVE!!!
+
+        *type sudo in first!
+        * try cd .. in Ubuntu
+
+Shells have different cmds from each other
+    UBUNTU CMDs
+        cd .. (change directories) (you can type in the path if you know it already)
+        cd mnt/ (move directories)
+        ls (list)
+        mkdir folderName (creates new folder)
+        cd ~ (return to original directory)
+
+    SHORTCUTS
+        type part of filename and then tab (autocompletes)
+        cd .. takes you back a level
+
+File Structure
+
+In terminal, use cmds to cd .. and mnt/ directories, this specifies the file path (where file is located on computer);
+    you can make a new folder with mkdir 

@@ -1,0 +1,170 @@
+MongoDB Essentials
+
+Course Overview
+    NoSQL
+    pros and cons of non-relational dbs
+    different types of data to store in docs
+    various query operators
+
+MongoDB Basics
+
+    instead of tables, DB uses BSON documents which is almost identical to JSON
+
+    it is a NoSQL (non-relational) db
+        it cannot use join to connect db
+        you use references (ref) to connect
+
+Advantages
+
+    Easy schema iteration
+    Scalability and Performance
+    Object-oriented
+
+Agile Dev - accomodates large volumes of rapidly changing structured, semi-structured, and unstructured data
+    Able to add schema on as need Basics
+
+Document vs Collections
+
+A document is a record in MongoDB collection and the basic unit of data in MongoDB. Docs look like JSON objects but exist as BSON.
+
+you can tell a doc is BSON because there are quotes around the key and value pairs
+
+A collection is a grouping of MongoDB docs. Most docs in a collection have a similar or related purpose.
+
+Mongo Install
+
+    when mongo is installed, it will have a bin with all excutables, like mongod and mongo, etc.
+        if having issues with mongo, make sure there is data/db folder on c drive
+
+    to get local instance of mongo running, use mongod
+        this gives access to mongo shell
+
+    then in another terminal use mongo
+        these two steps fully open the mongo shell
+
+Common Commands Using Mongo Shell
+
+    show dbs - shows list of all databases that have been created
+
+    use (db name) - uses/creates db for use
+        if successful will switch over to db
+
+            the schema is a representation of the collection and will constitute key/value pairs
+
+    db.dbname.find() - prints out all the docs that we add to collection
+
+            we use JSON to define objects in database and which is converted to BSON
+
+Commands in MongoDB
+
+    JSON is a very common language that we use for passing around data from the view to the server and back
+
+db.dbname.find().pretty() - does the same thing as find but prettier (instead of printing out a string, gives you a formatted, organized description of db)
+
+Adding and Modifying
+
+docs.mongodb.org/v3.0/reference/method
+
+searches, update, insert, find, remove
+
+    db.createCollections(collectionname) - creates collection
+
+    show collection - shows Collections
+
+to chain a cmd, use .cmdname()
+
+db.dbname.remove({key:"value"}) - removes doc
+
+The same way you can write commands in Chrome console, you can write code in mongo show???
+    you can write a for loop to insert things into db until it hit the magic number 10, 100, etc
+
+Data types
+
+Six Data types
+    string
+    number
+    array
+    boolean
+    ObjectId
+    date
+
+        Two Other types
+        buffer
+            used to store things like images, video, or audio
+        mixed
+            combines different types of data
+
+Query
+
+using cmds: db.dbname.find({})
+
+                if the parameters are left empty, then the query will return all docs
+
+            db.dbname.find("name":"Noctis"{})
+
+                this will return student name or any parameter & can be chained to .pretty()
+
+            db.dbname.find({units: {$gt:15}})
+
+                this will filter the results and return anything greater than 15
+
+                    can type lt instead
+
+                    can {classes: {$in: ["history"]}} and will filter through all docs to bring up all things with classes/history
+
+                        you can add a comma after history to return multi parameters
+
+Sorting
+
+    when sorting, you can assign either a 1 or -1 to parameters
+
+        you chain .sort({parameter:1}) to end of query followed by // ascending
+
+            this ranks the search from least to most
+
+        .sort({parameter:-1}) // descending will do the opposite
+
+            ranks search from most to least
+
+        we can sort either numerically or alphabetically
+
+            to sort alphabetically, you need only use a string
+
+to limit results
+
+    .sort({}).limit(2)
+
+        This would give the first two results
+
+These are the most common and useful commands
+
+    don't forget you can use <, >, and, & or conditions as well
+
+to find db, 1) use dbname
+            2)db.dbname.find().pretty()
+
+Quiz
+
+After starting our local instance of mongoDB using the 'mongod' command how do we access the shell?
+
+in new terminal, type mongo
+
+What method do we use to add a field in a document that doesn't currently exist?
+
+$upsert
+
+What is the difference between BSON and JSON?
+
+BSON has quotes around both the key/value pairs
+
+What command do we use to indicate which database we want to access?
+
+use
+
+What method is used to display our documents in a clean and organized way?
+
+.pretty()
+
+Which one of these is not one of the 6 main data types commonly used within the model of our collection?
+
+Buffer

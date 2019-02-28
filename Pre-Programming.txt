@@ -1,0 +1,209 @@
+Pre-Programming: Everything To Know Before You Start (Too Late)
+
+Sect 1, Lect 3
+To learn to program, one should know how computers work and operate
+RAM (random access memory) – allows your app to run continuously without freezing
+
+Sect 1, Lect 4
+What is a computer? 
+
+If you want to learn advanced concepts, you have to start with the correct way of thinking about tech
+A computer is literally anything that computes; it’s a thing that can determine an amount or number given certain rules
+
+This definition applies to laptops, wearables (fitbit), watches, cash registers, RFID badge, etc
+A car’s engine has a computer too: engine control unit or engine control module
+The brain is like a computer too, it can compute!
+
+A more practical way to understand what a computer is; any machine designed to solve problems automatically
+
+Computers will solve all problems within a parameter you give them
+Before machines people were computers if they solved mathematical problems (Artillery personnel)
+
+Bottom line: The computer is something that takes instruction and can run a calculation to give you a solution. Programming is: here are instructions, here is a process, and here is an output
+
+Sect 1, Lect 5
+Computers do not do anything without inputting info
+
+They need information and instructions to compute; through whatever app or program you use, you give the computer info and tell it to do x, y, z
+How does a computer actually do what it does?
+
+When you input info into a computer (typing, dbl click), you indirectly access the CPU (central processing unit). The CPU is the core of the computer and exe instructions at the lowest level
+This is where the problems actually get solved; Bill Gates: “The CPU is that thing that makes your computer do stuff.”
+
+Overclocked is a way to speed your processor up; Underclocked is a way to slow it down
+A processor can do arithmetic, functions, or whatever it needs to be done depending on what you send it
+
+Computers come with another crucial component called memory; memory keeps info on file w/o it disappearing. Computers come with memories built in, this is called the hard drive!
+
+Hard drives consist of a circular magnetic plate called a platter, it spins like a cd has info written on it. The disc is removed by the read-write arm (actuator arm), so it hits constantly when it needs to read or change the info.
+
+When there is info the computer needs to store but no a permanent basis, the computer uses RAM; (ex. A webpage’s content (text, images, etc) uses RAM)
+
+As a programmer, your basic function is: giving instructions to the computer in a way it understands
+Punch cards were the original program; literally had to be pushed in to run programs on computers the size of rooms
+
+British mathematician Benedict Cumberbatch discovered “stored program” concept; suddenly programmers could design machines that remembered programs
+Bottom Line: Take a CPU, hard drive, and RAM and you have the building blocks for a problem solving machine!
+
+Sect 1, Lect 6
+How do computers send and receive info?
+
+How does it actually get that info it plays with and deliver a response?
+In the world of computing there are peripherals. These are things like monitors, mouse, keyboard, speakers and such. It’s all the stuff sitting next to the computer itself.
+
+They work outside of the closed circuit, the CPU, RAM, and hard drive. They let you give the computer info and let the computer take the info, run a process, and send it back.
+
+By clicking mouse, you input info. This input allows the computer to run a calculation and respond with an output on the monitor. A keyboard works the same way. 
+
+The code you write as a programmer can be thought of as: input that computer receives, then the computer will respond by giving a corresponding output. 
+
+Whether or not the output matches with what you intended as a programmer depends on your ability as a programmer. 
+
+Sect 1, Lect 7
+Machine Speak and The Matrix
+
+Machines have their own language and that language is called machine code. When a computer wants to do something, or an application or peripherals, it does it through machine code. The most basic machine code is binary. 
+
+So how does 01010001101 actually work as a language? How does it relay this info and receive it?
+
+In computers, there are motherboards. Motherboards are where RAM, processor, and storage are all attached to. The motherboard is what actually transfers these messages. The motherboard lets electricity pass through a transistor and stops it to communicate. Letting the electricity pass is a 1 and stopping it is a 0. 
+
+Basic commands in binary are insanely long. 
+
+Codes can be called high, medium, or low level based on it’s spectrum. Low level code is what basic systems and basic hardware use. Machine speak (code) is the lowest of the low. Despite it’s complex and inefficient nature, machine code is infinitely customizable. 
+
+High level code to fix that problem. High level code is short, but more rigid when it comes to customization. High level code is associated with software, websites, and mobile apps. 
+Peripherals use a slightly higher machine code than computers (modern computers use this code too). To function correctly, it needs a driver. The driver translate the code for peripherals.
+
+Sect 1, Lect 8
+OS
+
+What makes computer special is the OS!
+
+Before OS, the only people who used computers were certain people. Only highly technical people could use them because they understood machine code/speak. It was only the in the PC era that everyone could use a computer. 
+
+The innovation of the PC (personal computer) allowed for the invention of software. Hardware, the equipment you touch like the computer. Software is an application or system of instructions & logic that exists within the actual hardware and is used to control it.
+
+Before software, hardware was quite dumb?
+
+First software worth knowing is MS-DOS (Digital Operating System). MS-DOS took your high level code and translated it into machine code. The core of any OS is to interpret high level code and dumb it down to machine speak.
+
+Sect 1, Lect 9
+OS In the Modern Era
+
+GUI (Graphic User Interface) was invented by Xerox and stolen by Steve Jobs! The GUI is something we see today in OS like Window 98 or Windows 10. Until GUI, OS were text based (DUI?).
+Jobs stole this GUI and made and released a copy--The Mac.
+
+GUI could translate images, mouse clicks, translate motion onscreen, and opening things down to machine code. New software bloomed under GUI. There's three big OS to be aware of Windows, Macs, Linux. Windows was one size fits all for consumers. Mac OS is/was simpler to use the Windows. Linux was going to be free and unrestricted.
+Linux is open source. Linux is the dominate OS for servers.
+
+Sect 1, Lect 10
+Desktop Software
+
+Desktop is equivalent to the OS. Any app, self contained script, or series of logic that runs within your OS is called desktop software. You can just go to the desktop and run it.
+
+When you start up a computer, we have an OS. An OS does two things, it simplifies the process of using a computer by letting you visually select and manipulate files and things you need to use. And secondly, it translates everything you do and save, and sends it down to the lowest level of code your computer can understand.
+
+OS translates codes differently. MS OS and Mac OS have different machine code. Within primary OS is way to make mini (or sub?) OSs, i.e; apps that serve different function. A browser, Skype, or mail client are examples of this.
+
+So, hardware runs OS, which runs desktop software and must communicate with the system its enclosed in. Desktop software talks in a specific high level language to its OS, which translates it into machine code for the hardware.
+
+Platform - In the computer world, a platform means creating a software environment where anyone else can make something the runs on your OS and distribute it to users. Nowadays everything is a platform, phones, watches, consoles, etc.
+
+Quiz 1
+
+An abacus is not a computer, but a tool since it is not automated. 
+
+If computer slows down, then it is using too much RAM.
+
+The matrix speaks in low level code.
+
+Desktop software > OS/mini systems and apps > Computer hardware
+
+Sect 2, Lect 13
+The Internet
+
+How does the internet actually work? 
+
+DARPA (Defense Advanced Research Projects Agency) made the first version of the internet. In the 60s, they created ARPANET, with the idea to connect one computer to another over vast distances of space. They successfully did so in 1969. 
+
+Over the next decades, DARPA needed a more efficient way to network computers, and created TCP/IP (transfer control protocol). TCP is just breaking up data for into packets and IP is a series a numbers that tells that info where to go.
+
+Until the 80s, internet was used for transferring research between institutions. WWW is not the same as the internet. And internet is a variation of intranet (which was a connection of machines that are local). These machines connect either directly to each other or through a hub. If connected through a hub, this is called LAN (local access network).
+
+If a LAN is connected to another LAN, that is technically an internet. 
+
+In order for computers to transfer info to another, they need to have the same hardware and software. You can't send a WhatsApp message through Facebook Messenger. The WWW skips over that problem.
+
+It created a unified system, where all computers can access and transfer the same info. One of the ways it does this is HTTP protocol, which acts as a language for coding info that every computer on the planet can understand. 
+
+Sect 2, Lect 14
+The Anatomy of the Internet
+
+Client, Node, and Server:
+    A client is the device in a transaction receiving information.
+    A server is the device that stores the info and sends it out.
+    Any machine that the info passes through is called a node. 
+
+The internet is made solely of these three pieces. 
+
+When the client receives something from the server, it transfers through nodes. There are three nodes to know:
+
+    ISP (Internet Service Provider)
+
+        This is the company that provides internet service, such as Comcast, Time Warner, or AOL. These are mega hubs for distributing and connecting computers around the country.
+
+    Modem
+
+        A modem is permanently connected to your ISP hub. When your internet is out, it often the modem messing up. A modem acts as a bus that transfers info from ISP. It also acts as bouncer to your computer and ISP, regulating what connects through it and who gets access to what.
+
+    Router
+
+        A router is a hub that allows all devices and systems in one room or area. The router is what takes that internet transfer and transfers it through that wave length called Wi-Fi. You don't need a modem for every computer, you just need a router. Routers route traffic so multi devices can use one connection to the ISP.
+
+
+Sect 2, Lect 15
+Domain, IP, DNS
+
+Bottom line: The internet transfer info from one server to your computer. First it goes to through an ISP, then through a local modem, then through a router and then to your computer or phone.
+
+    Domain Names
+        Domain names are simply the names of a website. 
+            https/www.tvtropes.org/
+            www.fark.com
+            fanfiction.net
+
+    IP Address
+        IP stands for Internet Protocol and is a series of nine numbers. IPs are like routing numbers. Computers use IP to find the location of your computer or find the server you're trying to get info from.
+
+    DNS
+        DNS stands for Domain Name System. DNS have one piece of info: what IP address is associated with what domain name.
+
+ICANN - International Corporation of Associated Names and Numbers. Its the non profit that rules over DNS and decides if the domain is available. ICANN is what you use to tell you who owns that domain and if it's available.
+
+Sect 2, Lect 16
+
+Browser
+
+    Browsers are:
+
+        a door to the internet
+        a surfboard for surfing
+        gateway to memes 
+        and how to read your gmail
+
+What is a browser?
+
+    Browsers are like any other software program!
+
+If the WWW make information available to all computers without those computers having the same exact hardware and software, the browser enables access to the WWW. A browser has two basic functions: establish a consistent connection with the server and translate web programming into something that the OS can understand (the OS dumbs that down to machine speak). 
+
+Again when programmers program we're giving the computer instructions to exe and handle. In order to manipulate a browser to display something, you use web code. The browser acts an interpreter for a very specific language, which it gives to the OS, which it dumbs down to machine code.
+
+There are several hundred browsers out there. The top are (in order): Chrome, Firefox, Explorer, Safari, and Opera. Different browsers have different ways of interpreting web code. It's just like different ways of interpreting a sentence from a foreign language. As a dev, you'll be spending a lot of time making sure the site you build works correctly in different browsers.
+
+Opera is actually the best interpreter of web code! Explorer is the least accurate of the popular browsers? Firefox is non-profit but makes about $300 million.
+
+Sect 2, Lect 17
+
+Mobile Internet

@@ -1,0 +1,60 @@
+Git and GitHub Crash Course
+
+How to create a Repo with Git
+
+How to Get Started With Git
+
+How to contribute to Repo
+
+What a Repo Is and Make Changes to Files, Add New Ones
+
+How to Take All of Your Work and Send It to GitHub
+
+Terms To Watch Out For:
+
+    Cloning
+    Staging
+    Committing
+    Repositories
+    Pushing
+
+And we will learn to do this on the command line (terminal).
+
+Making a new repo on GitHub is easy. Simply log into the site and create a new repo. A repo (repository) is simply a place to your code or stuff. A storage unit basically. 
+
+For a new repo, you need a name and description of it. Then you have two options:
+
+    1) Public or Private (Private is paid storage)
+        GitLab is an alternative to GitHub, but all repos are free!
+
+    2)ReadMe and GitIgnore and License???
+
+The next choices are important! They are:
+
+    Quick Start
+
+        Quick start gives you the url to the repo you just made. Using the https url (the ssh lets you do the same thing w/o logging in), copy and paste that in the terminal.
+
+    Create New Repo On Command Line
+
+        Copying and pasting this line in the terminal will link the repo to the file(s). 
+
+Git
+
+There are two main ways to handle Git. On Windows, you use Git for Windows. Or Ubuntu to access Git on Windows. Remember command lines are super important because there is no GUI when committing to GitHub. It's all command line.
+
+Always check the version of program running from terminal with programname --version!
+
+If you don't have Git, go get it:
+
+    Windows - download Git installer from Git site
+    Linux - apt-get install git on command line
+    Mac - brew install git 
+
+Note: these are not exact commands.
+
+Commands to Know:
+
+on unix based systems (ubuntu): pwd = show directory
+mk dir = make directory
+cd foldername/ + tab (auto complete) = change directory

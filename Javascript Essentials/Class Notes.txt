@@ -1,0 +1,33 @@
+/* to clean up GitHub
+1. go to workspace
+2. delete all .git folders
+3. if you don't see .git folders, show hidden files (cmd+shift+.)
+4. organize files and folders 
+5. delete old one and connect to new clean repository */
+
+/* To connect old repo to new folder
+all lower case
+1. in the new folder, open terminal at folder location
+2. type git init
+3. type git add . or git add-A
+4. git commit - M "first commit" 
+5. git remote add origin "git url" 
+6. git push -u master */
+
+/* This is class stuff
+
+//const never changes, if you want something to change use var
+//you use bedmas to use multi arithmetic in the same function
+//be careful not to reassign var when using assignment operator
+//you won't use bitwise, but you need to know what it is!!!
+for (x = 0; x < 200; x+=10) {
+    console.log(x);
+}
+
+console.log("This function takes x and uses a for loop with an assignment operator to increase it by 10 until it hits 200.");
+
+console.log("? is a ternary operator and part of conditional operators. Think of it as yes or no, true or false, use it if you have a short if/else.");
+
+console.log("Logical operators are &&, ||, ! (and, or, not).");
+
+console.log("A while loop may be useful in video games, but you can use a for loop instead."); */

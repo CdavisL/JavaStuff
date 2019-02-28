@@ -1,0 +1,64 @@
+{
+    firstname: "Noctis"
+    lastname: "Caelum"
+}
+
+db.car.find().pretty()
+this finds the db and formats it for easier reading
+
+db.ffxvchar.find().pretty()
+
+db.ffxvchar.insert({
+    name:"Prompto",
+    age:20
+    })
+
+db.ffxvchar.update({
+    name:"Prompto"},
+    {$set: {
+        name:"Regis"
+    }
+})
+
+db.ffxvchar.update({
+    name:"Regis"},
+    {$set: {
+        status:"king"
+    }
+    },
+    {$upsert: true})
+
+    
+
+db.car.insert({
+    name:"honda",
+    make:"accord",
+    year:"2010"})
+
+this is a JSON object and when submitted will be BSON
+you can end with a semicolon or not (opt)
+single or double quotes (opt)
+key:"value" or "key":"value" (opt)
+
+to paste into terminal, right click
+
+db.car.update({
+    name:"honda"},
+    {$set: {
+        name:"ford"
+    }
+})
+
+this updates the doc
+
+db.car.update({
+    name:"ford"},
+    {$set: {
+        transmission:"automatic"
+    }
+    },
+    {$upsert: true})
+
+this modifies the doc by adding a new key/value pair
+
+db.car.remove({name:"ford"})

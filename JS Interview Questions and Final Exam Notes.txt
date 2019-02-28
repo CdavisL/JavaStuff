@@ -1,0 +1,275 @@
+JavaScript Interview and Final Exam Notes
+
+What is JS?
+
+JS is a light weight, interpreted programming language with object oriented capabilities, that allows for interactivity in static  HTML pages.
+
+Features of JS are:
+
+    light weight, interpreted programming language
+
+    creation of network-centric apps
+
+    complementary and integrated with HTML
+
+    complementary and integrated with Java
+
+    open and cross platform
+
+Advantages of using JS are:
+
+    immediate feedback to users; they don't have to reload to see if they forgot to input something
+
+    increased interactivity; create interfaces that react when the users hovers over them with the mouse or activates them via keyboard
+
+Disadvantages of JS are:
+
+You can't treat JS as a full programming language. It lacks:
+
+    client side JS can not read or write files, this is for security purposes
+
+    JS can not be used for networking apps because there is no support available (networking apps are basically company based access)
+
+Is JS case sensitive?
+
+Yes. Keywords, var, function names, and other identifiers must be consistent in use!
+
+How do you create an object in JS?
+
+This is called object literal:
+var Noctis = { name : "Noctis Lucis Caelum, age: 20, status: "Prince of Lucis, King of Fishing!" };
+
+The secret is key/value pairs. The value can be string or a number.
+
+How can you read properties of an JS object?
+
+You use dot notation to read properties of JS object. 
+
+Ex: 
+.name = Noctis
+.age = 20
+
+How to create an array in JS?
+
+This is called array literal:
+var x = [];
+var y= [1, 2, 3, 4, 5];
+
+How do you read elements in an array?
+
+To read an array, use the length property with iteration:
+
+var x = [1, 2, 3, 4, 5];
+for (var i=0; i < x.length; i++) {
+    //code 
+}
+
+What is a named function in JS? How do you define a function?
+
+A named function has a name when it is defined. A named function can be defined using a function keyword:
+
+function name() {
+    //code
+}
+
+How many types of functions does JS support?
+
+Two, named and anonymous.
+
+How do you define an anonymous function?
+
+An anonymous function has no name:
+
+function () {
+    //code
+}
+
+Can you assign an anonymous function to a var?
+
+Yes.
+
+Can you pass an anonymous function as an argument to another function?
+
+Yes.
+
+What is arguments object in JS?
+
+JS var arguments represents the parameters/arguments passed to a function.
+
+How can you get the type of arguments passed into a function?
+
+Use the typeof operator:
+
+function type(x) {
+    console.log(typeof x, arguments.length);
+}
+
+How can you get the total number of arguments passed to a function?
+
+You use arguments.length. (Same function as above.)
+
+How can you get the reference of a caller function inside a function?
+
+The arguments object has a callee property which refers to the function you're inside of:
+
+function x() {
+    return arguments.callee;
+}
+
+x();
+
+What is the purpose of 'this' operator in JS?
+
+This JS keyword is always refers to the current context.
+
+What are the valid scopes of var in JS?
+
+The scope of a var is the region of your program where a var is defined. There are two, global and local. A global var is defined outside the function, while a local var is defined inside the function.
+
+Which scope has priority?
+
+A local var with the same name as a global var has priority.
+
+What is a callback? 
+
+A callback is a plain JS function passed to some method as an argument or option.
+
+What is closure?
+
+Closures are created when a var is defined outside the current scope is accessed from within some inner scope.
+
+An example of a closure:
+function create() {
+    var counter = 0;
+    return {
+        increment: function() {
+            counter++;
+        },
+
+        print: function() {
+            console.log(counter);
+        }
+    }
+}
+var c = create();
+c.incerment();
+c.print();
+
+In this example, counter is a closure. Defined outside the scope, but accessed from within.
+
+What built-in method returns the character at the specified index?
+
+charAt method
+
+What built-in method combines the text of two strings and returns a new string?
+
+concat method
+
+What built-in method calls a function for each element in an array?
+
+forEach method
+
+What built-in method returns the index within the calling string object of the first occurrence of the specified value?
+
+indexOf method returns the index within the calling string object of first occurence. If not found it returns -1.
+
+What built-in method returns the length of a string?
+
+length method
+
+What built-in method removes the last element of an array and returns that element?
+
+pop method
+
+What built-in method adds one or more elements to the end of an array and returns the new length of the array?
+
+push method
+
+What built-in method reverses the order of elements of an array?
+
+reverse method
+
+What built-in method sorts the elements of an array?
+
+sort method
+
+What built-in method returns characters in a string at the beginning of a specified location?
+
+substr method
+
+What built-in returns the calling string converted to lower case?
+
+toLowerCase method
+
+What built-in returns the calling string converted to upper case?
+
+toUpperCase method
+
+What built-in returns the calling string representation of the numbers value?
+
+toString method
+
+What are JS naming conventions?
+
+Do not use reserved keywords, var names do not start with 0-9, and names are case sensitive.
+
+How does typeOf operator work?
+
+typeOf is a unary operator, it can be of any type, and it's value is a string indicating the data type of the operand. It evaluates the number, string, or boolean.
+
+What does type of return for null value?
+
+It returns object.
+
+Can you access cookie using JS?
+
+JS can manipulate cookies using cookie property of document object. JS can read, create, modify, and delete cookies that apply to the current page.
+
+How to create cookie in JS?
+
+Create a cookie by assigning a string value to document.cookie object:
+document.cookie = "key : value, key2 : value2; expires = date";
+
+How to read a cookie in JS?
+
+The value of the document.cookie object is the cookie. The key/value pair can be broken down with the sting split function.
+
+How to delete a cookie using JS?
+
+Simply set the expiration date to a time in the past.
+
+How to redirect a url in JS?
+
+You use window.location to redirect a url:
+window.location="https://www.google.com";
+
+How to print a web page using JS?
+
+Use the print function of window object:
+window.print
+
+What is date object in JS?
+
+Date object is data type built-in to JS. Date objects are created with new Date. Once created a number of methods allow you to operate on it.
+
+What is number object in JS?
+
+Number object represents the numerical date in integers or floating-point numbers.
+
+ex: var val = new Number(number);
+
+If the argument can not be converted into a number , it returns NaN.
+
+How to handle exceptions in JS?
+
+JS implements try... catch... and finally construct, as well a throw operator to handle exceptions. You can catch programmer related errors and runtime exceptions, but not syntax errors.
+
+What is the purpose of onError event handler in JS?
+
+The onError event handler is first feature to handle errors for JS. The error event is fired on the window object whenever an exception occurs on the page. It provides 3 pieces of info to identify the exact nature of the error:
+
+    Error Message: same as browser error Message
+    URL: the file where error occurred
+    Line Number: the line number in URL that caused the error
+
+Go thru past assignments.

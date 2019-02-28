@@ -1,0 +1,339 @@
+Intro to Node JS and Express
+
+What is Node JS and Express
+
+    Node JS is JS based runtime & Express JS is most popular framework for Node
+
+        Node is an enviroment, not a framework
+
+    Node/Express is among the most dominant
+
+NPM is the major package manager for node
+
+    use that to install packages
+
+    can install either locally or globally
+
+        the difference is global install packages on computer
+
+        local installs the package to the project folder and only works within that project
+
+MORE INSTALLS IN COURSE
+
+First-Project
+
+    npm init -initializes npm in walkthrough mode
+
+This will lead to project, starting with package.JSON. The JSON is central point of every node app.
+
+    npm install express --save
+
+This installs express locally to project. Will have node_modules which houses dependencies. Also have a locked package.JSON file. Express has multi subdependencies which is why so many things appear.
+
+Express will be updated as dependency in packeage.JSON.
+
+Create an index.js in the project folder to serve as node/express server. In this file type:
+
+    const express = require("express")
+        This is how you import a module from the node library.
+
+        const app = express()
+            This ties the app to express?
+
+Next we create a request handler:
+
+    app.get("/", (req, res, next) => {
+
+    res.send("Hello!!!")
+    
+    })
+
+        This will respond to an incoming request from the site.
+
+            Get is a type of HTTP request, sends request to server.
+            The slash indicates homepage (index).
+            The function uses req (request), res (response), and next.
+
+                Request would be user input and response would be server's response (output)???
+
+Next we connect the app with the server:
+
+    app.listen(3000)
+
+Then run the server through the terminal: node index.js.
+Result: It worked!!!
+
+TO TURN OFF SERVER USE CTRL C!!! In terminal this will look like ^C.
+
+If the above works, you can use the app.get repeatedly with copy and paste to change as needed.
+
+    The ("/") is the path and the path can be changed. You can for example change it to JSON to send back raw data.
+
+The second app.get will look like this.
+
+        app.get("/json", (req, res, next) => {
+
+    const data = {
+        greeting: "Hello!!!"
+    }
+
+    res.json(data)
+
+})
+
+    THE END RESULT IS A NEW PATH. WHEN YOU CONNECT TO THE SITE AND TYPE /json, YOU WILL FIND THE JSON OBJECT YOU CREATED.
+
+Another kind of response is to render actual HTML content. To streamline this process, you use a templating engine. You use that engine so you can inject data into those html templates and render it dynamically.
+
+To do this make new directory: mkdir views
+
+    Next create a template. In this example, the template will have NO EXTENSION and be called home.mustache.
+        
+        Since this has NO EXT you will need to create html, head, and body tags.
+
+    In index.js add the following:
+
+        const path = require("path")
+
+        After that set the app to views folder:
+
+            app.set("views", path.join(__dirname, "views"))
+            This tells the app to look at the views folder.
+    
+Then install templating engine using npm install (engine name). In this example, we will use: npm install hjs --save. This will be followed by npm install hogan-middleware --save. This package will allow us to use mustache templating engine.
+
+        Underneath app.set("view") add this:
+            app.set("view engine", "mustache")
+
+            This will be followed by this:
+                app.engine("mustache", hoganMiddleware.__express)
+                This enables the template engine to be used.
+
+Note: There is a more direct way to write this code and it is noted in index.js.
+
+After this, add the new route:
+
+    app.get("/home", (req, res, next) => {
+
+    res.render("home", null)
+
+    })
+
+Notice that this response takes two arguments. 
+
+Then use node index.js in terminal. It should display text entered in html.
+
+Static Assets
+
+Static assets are images, css, pdf, JS and such. You want single directory for this.
+
+    mkdir public
+
+    Then cd to public then mkdir for images, style(css), and js.
+
+        Next, connect those directories to the app through the: app.use(express.static(path.join(__dirname, "public")))
+        Place this below the app.engine function.
+
+            Add necessary images and docs to folders.
+
+                Add img to home.mustache.
+
+                    cd to project folder using cd .. .
+
+node index.js. If working, console log and image appears. These steps are easily repeatable using the above template.
+
+Next make new directory, named routes. 
+
+    Make new index.js file in routes.
+
+        Then add this:
+
+        const express = require("express")
+        const router = express.Router()
+
+        //insert routes (request handlers) here
+        router.get("/", (req, res, next) => {
+
+        res.send("Hello from the routes!")
+    
+        })
+
+        module.exports = router
+
+Once this is in routes version of index, go to original index.js and add this command to link to routes (will be placed under last route):
+
+    const indexRouter = require("./routes/index")
+
+    app.use("/", indexRouter)
+
+        This is necessary because most sites have dozens of requests and its poor form to keep them all in this particular file. Always use the route folder.
+
+REMEMBER DOING THIS STEP WILL WIPEOUT PATHS RESULTING IN ERROR.
+
+Project Generators
+
+Rather than installing the same libraries over and over again for different projects, a lot of devs use a scaffolding engine or generator (same thing). These create projects out of the box with a lot of the same configurations. The above instructions are on how to make one (a project) from scratch and generators act as templates.
+
+    To use generator:
+
+        cmd prompt
+
+            npm install turbo-cli -g (this installs to the computer) (node express is among turbo-cli)
+
+                check version with turbo version (not -v)
+            
+            open project in editor
+
+                app.js is where the app is configured
+
+                package.json is where generating really works, particularly dependencies
+
+                    to switch servers: npm install nodemon -g
+                        this keeps server running while editing files, don't have to restart terminal
+
+                    type nodemon into terminal, if successful will say watching files
+
+There are many generators out there, but they all fundamentally do the same thing.
+
+Dealing with incoming Requests
+
+    For this project, remove import and set api method.
+
+        To make sure this worked correctly use node sample-project, then nodemon in terminal. This may take a sec.
+
+How requests are organized:
+
+    Add new route: router.get("/test", (req, res) => {
+	                    res.json({
+		                    data: "That's it! I've come up with a new recipeh!"
+	                    })
+                    })
+
+The above creates the url: localhost:3 000/test
+
+    the second part of the url (aka endpoint) can be turned into a var and used to manipulate the response
+
+        to do this change /test to /:path
+        add: const path = req.params.path
+
+        router.get("/:path", (req, res) => {
+            const path = req.params.path
+	            res.json({
+		            data: path
+	            })
+        })
+
+        Whatever you change data to in this route, it needs to share the original url name first. It can then be changed to anything.
+
+You can add two parameters like this:
+
+    router.get("/:profile/:username", (req, res) => {
+	const profile = req.params.profile
+	const username = req.params.username
+		res.json({
+			profile: profile,
+			username: username
+		})
+    })
+
+        These parameters are paths and build onto each other. You can add as many as you want.
+
+Query Parameters
+
+    This is a test route with a query parameter:
+
+        router.get("/query", (req, res) => {
+                res.json({
+                    query: "test"
+                })
+        })
+
+    The real deal:
+
+    router.get("/query", (req, res) => {
+    const name = req.query.name
+		res.json({
+			name: name
+		})
+    })
+
+Type /query into url and it prints. To make full use of this use: 
+
+    /query?name=lee
+
+You can get add more parameters here too:
+
+    router.get("/query", (req, res) => {
+    const name = req.query.name
+    const occupation = req.query.occupation
+		res.json({
+			name: name,
+            occupation: occupation
+		})
+    })
+
+    the url will be:
+
+        /query?name=lee&occupation=programmer
+
+You can use response and query parameters to dynamically render contents on a page. To do so, create mustache file and give html tags.
+
+    Give name followed by {{parameter}}
+
+    Then rewrite the code to this:
+
+        router.get("/query", (req, res) => {
+        const name = req.query.name
+        const occupation = req.query.occupation
+        const data = {
+            name: name,
+            occupation: occupation
+        }
+        res.render("profile", data)
+        })
+
+Restart the app and the info will display as directed with html tags.
+
+Post Requests
+
+    router.get is a type of request. There are different kinds of requests. The four most important are post, get, put, and delete (create, read, update, delete???).
+
+    Post requests: 
+
+        In views index, create form using the form and input tags. 
+
+        Then link the form to the routes.js file using this code: 
+
+            <form action="/post" method="POST">
+
+                This will be in the form that you created in the views index.
+
+                In the form, value="Submit" could be "Sign Up" or "Register".
+
+With this done, the form will be linked to the routes folder. This will enable the user to enter information and that info will be turned into a JSON object (with the message you entered in routes/index.js) and printed in the /post url.
+
+To create a new route file for this:
+
+    create new .js file in routes
+
+        copy imports from index.js file
+
+            copy export at the end of index.js file
+
+                add code:   router.post("/user", (req, res) => {
+                            const body = req.body //normally this comes from a POST form
+
+	                        res.json({
+                            confirmation: "Gladio got 'em.",
+                            route: "register",
+                            data: body
+                            })
+                            })
+                    
+                    update app.js file with this: 
+                    const register = require('./routes/register')
+                    app.use('/register', register)
+
+This should work. If moving route, ensure that html tag reflect changes.
+
+Profile Page

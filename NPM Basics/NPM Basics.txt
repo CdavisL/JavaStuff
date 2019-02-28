@@ -1,0 +1,110 @@
+node -v = check version of Node
+
+npm -v = check version of NPM
+
+npm help = access help on NPM
+    help gives you a list of all commands available
+
+npm install -h = lets you install with help
+    lists all the different ways to install NPM
+
+npm help-search = allows you to access specific things in help
+    add command like update or install after search
+
+npm init --yes = skip questions on creation of JSON package
+
+Credits: 
+    If we want every project to be credited to self/university:
+    npm config set init-author-name "C Davis" (that's a string)
+
+    npm set init-license "EKA"
+        
+        npm config get init-author-name = lets you can check this by typing in the same command
+        npm config get init-license = lets you check default name
+
+npm config delete init-license = delete license
+
+npm install followed by package name = install a package locally
+    you can go directly to the folder name in file explorer and type cmd to open the terminal
+
+npm install (name) --save = saves with dependencies (unnecessary for updated version???)
+
+npm install (name) --save-dev = if you want to install packages for development and not production
+    You use mocha or karma as a dependency, but those are large
+
+npm uninstall (name) = uninstall packages
+
+npm uninstall (name) --save = remove entry on JSON file
+
+npm install (name) -g = this installs the package globally
+    when you install globally, you don't see the dependency or the package in the folder
+
+npm uninstall (name) -g = uninstall a global package
+    you can use npm remove (name) or npm rm to remove packages as well
+
+npm list = lists packages in tree format (these can be quite long)
+
+    npm list --depth 1 = restricts the depth of tree in list with dependencies
+
+    npm list --depth 0 = restricts depth to packages
+
+    npm list --global true --depth 0 = list of packages that are installed globally with location/path
+
+semantic versioning is a specification where a version is represented by 3 numbers that mean the same thing for every dev.
+
+    the first number represents the major version
+        this is incremented when there is a break in existing functionality
+
+    the second number is the minor version
+        this is incremented when multi bugs are fixed
+
+    the third is patch version number
+        this is incremented when a bug is fixed
+
+    when a package is installed is the latest stable version of that package
+
+npm install (name)@1.2.3 --save = install a specific version of a package
+
+npm install (name)@1.2 --save = restricts to minor version (second number) with latest patch
+
+npm install (name)@1. --save = restricts to major version
+
+show dbs = shows the databases in in mongo
+
+Installing from package.JSON
+    start with the read.me
+        read me tells you to install using NPM
+        then install dependencies
+            if you see ^1.2.3, this means stick to the major version, install latest minor and patch versions
+            if you see ~1.2.3, this means stick with major and minor version and retrieve the latest patch
+            if there is no ~ or ^ then the JSON package will install that specific version listed
+            if you use * then the package will install the latest version
+
+It is essential to update packages from time to time to make use of features from newer versions
+
+npm update (name) = update specific package
+
+npm update --dev = update dev dependencies only
+    you can add --save dev for package???
+
+npm update = update all packages
+    add -g to update all packages globally
+    for a specific package add the name after -g
+
+to update NPM
+    open cmd prompt as adminstrator
+    npm install npm@latest -g
+
+if a package is marked extraneous, then it is loaded in the project folder, but not in the package on file
+
+npm prune = this will remove extraneous packages
+
+shortcuts!
+npm init -y = npm init -yes
+npm i express = npm install express
+npm i express -S = npm install express -save
+npm i express -D = npm install express --save -dev
+-g = -global
+-v = -version
+
+for more shortcuts go to docs.npmjs.com/misc/config

@@ -1,0 +1,85 @@
+HTML & CSS Super Fun
+
+HTML - a way to tell browser how to display a webpage
+
+    A browser is an app with a GUI used to display HTML
+    HTML defines the structure of a site
+
+CSS - defines how that structure looks --the style!
+
+    defines how HTML elements look and feel
+    covers dimensions, borders, shape, size, color, fonts
+
+HTML Documents require 5 parts:
+
+    document type declaration (<!doctype html>)
+    HTML tag root element (<html><head></head><body></body></html>)
+    meta info (this is contained in head tag)
+    document title
+    document body
+
+HTML Tags
+
+    tags define the structure of HTML doc
+    <p></p>, <h1></h1>, <blockquote></blockquote>
+    CSS style comes later
+
+    the five parts of HTML come in tag form:
+        <!DOCTYPE HTML>
+        <html>
+        <head>
+        <title>
+        <body>
+
+Tags:
+
+    <h1> - this goes through 5 sizes and has own style not set by CSS. It's meant for headings and subtitle like paragraph heading and page heading
+
+    <a href></a> - this is to link to either elsewhere on the page (top or bottom), or another page on the site, or a different site
+
+    <div> - acts as building blocks for site
+    
+    <p> - when simply writing you put it in <p>
+
+Elements:
+
+    HTML elements are opening tag, closing tag, and everything inbetween 
+        ex: <p>Noctis Caelum</p>
+
+<div> is one of the most important tags in HTML (they are building blocks)
+    they can have attributes like id="container", class="header", or style=???
+        giving a div is class is like naming it and how CSS will be associated with that div
+
+CSS
+
+    CSS can control the style of multi html docs and saves a lot of work. You can use that one doc and change all html files it is linked to.
+
+CSS is made of rulesets. A ruleset is composed of a selector and declaration block
+    declaration list property:value;
+
+ex:
+
+    index.html
+
+<div class="banner"><div>
+
+    style.CSS
+
+.banner {
+    background-color: red;
+}
+
+.banner is the selector
+{} is the block
+background-color is property
+red is the value
+; ends the property/value statement
+
+There are 3 selectors in CSS:
+    class selector - .banner
+    ID selector - #banner
+    element selector - <h1>
+
+The difference between ID and classes is that classes are just object oriented programming and meant to be reusable. ID should only appear once (a one time only deal). An element selector styles all elements of the same name and has no preceding symbol.
+
+A comment in an html is <!-- --> and a CSS comment is /* */

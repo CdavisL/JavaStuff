@@ -1,0 +1,11 @@
+Abstractions hide details and give us the ability to talk about problems at higher level. Think about this in terms of classes (JavaScript Master, Section 4).
+
+Classes are related to object oriented programming, classes allow you to abstract, encapsulate properties such as var and methods for common functionality.
+
+CLASSES ARE A TEMPLATE DEFINITION OF THE METHODS AND VARIABLES IN A PARTICULAR KIND OF OBJECT.
+
+In Chrome console, you can use sources to run the script of an app and stop that app at any point. You use the step over/under button to do so. You use the pause/play button to halt or run the app. The three dots are used to step out.
+
+When editing html in Chrome console, it is possible to copy and paste the results in your actual html file if you like the results.
+
+Throw takes an error and throws it out. Catch catches the error and gives a response. 

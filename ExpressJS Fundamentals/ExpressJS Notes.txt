@@ -1,0 +1,20 @@
+ExpressJS Fundamentals
+
+Course Overview
+    What is Express
+    Server Setup
+    Express Scaffold
+    Middleware
+    Templating
+    Routing
+
+What is Express
+Express JS is fast, unopinionated, minimalist web framework for node.js
+
+Why use Express
+good for ultra fast input and output
+node.js is asynchronous and singlethreaded--i.e. many requests can be made simultaneously with bottlenecking
+has a robust API allows us to configure routes to send and receive requests from a front end and connect to database
+
+Setup & Configure
+
